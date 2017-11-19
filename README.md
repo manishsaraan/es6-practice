@@ -1,1 +1,1 @@
-# es6-practice
+# ES6 Features Practice
