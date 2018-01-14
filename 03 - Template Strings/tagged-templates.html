@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+  <style>
+    .h1{
+      color : yellow;
+    }
+  </style>
+</head>
+<body>
+<script>
+  //spread operation of es6 with three dots.
+  //strings will be strings in current template string and values will be variables passed in the string.
+  function hightlight(strings, ...values){
+    let str = '';
+    strings.forEach( (string, i) => {
+      //str += string + (values[i] || '');
+      str +=`${string} <span contenteditable class="h1">${values[i] || ''}</span>`;
+
+    });
+    return str;
+  }
+   const name = 'Snickers';
+   const age = 2;
+   //tagging string input to a function
+   const sentence = hightlight`My dog's name is ${name } and he is ${age} years old.`;
+   document.body.innerHTML = sentence;
+</script>
+</body>
+</html>

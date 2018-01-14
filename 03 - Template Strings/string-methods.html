@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+  <style>
+    .h1{
+      color : yellow;
+    }
+  </style>
+</head>
+<body>
+<script>
+ const course = 'RFB2';
+ const flightNumber = '20-AC2018-jz';
+ const accountNumber = '33232238923232323';
+ const make = 'BMW';
+ const model = 'x5';
+ const color = 'Royal Blue';
+
+ // .startsWith()
+ //checkif a strings start with certain character.
+ course.startsWith('RFB'); //true
+ //or ignore x nubmers from start and then count
+ flightNumber.startsWith('AC',3); //ignore first 3
+
+ // .endsWith();
+ //check if strings endcs with
+ accountNumber.endsWith('23'); //true
+ //ignore last x numbers
+ accountNumber.endsWith('23', 3);
+
+ //.includes()
+ //check if string contains certain characters.
+ flightNumber.includes('2018'); //true
+
+ // .repeat();
+ //repeat a value n times
+ make.repeat(100);
+ function leftPad(str, length=20){
+  return `-> ${' '.repeat(length - str.length)}${str}`;
+ };
+ console.log(leftPad(make));
+ console.log(leftPad(model));
+ console.log(leftPad(color));
+</script>
+</body>
+</html>
