@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const person = {
+			first : 'manish',
+			last : 'kumar',
+			country : 'india',
+			city : 'panchkula',
+			twitter : '@manishsaraan'
+		};
+		//destructing object with destructing with key same in object
+		const {first, last } = person;
+		const person1 = {
+			first : 'manish',
+			last : 'kumar',
+			links : {
+				social : {
+					twitter : 'https://twitter.com/manishsaraan',
+					facebook : 'https://facebook.com/manishsaraan'
+				},
+				web : {
+					blog : 'https://manishsaraan.com'
+				}
+			}
+		};
+		//destructing in nested object
+		//also you can rename them while destructing
+		const { twitter:twt, facebook:fb } = person1.links.social;
+		const settings = {
+			width : 300,
+			color : 'black'
+		}; //height, fontsize
+		//setting default values 
+		const { width = 100, height = 100, color = 'blue', fontsize = 25} = settings;
+	</script>
+</body>
+</html>

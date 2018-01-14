@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>	
+     function convertCurrency(amount){
+     	const converted = {
+     		USD : amount * 0.76,
+     		GPB : amount * 0.53,
+     		AUD : amount * 1.01,
+     		MEX : amount * 13.30
+     	};
+     	return converted;
+     }
+
+     const { MEX} = convertCurrency(100);
+     console.log( MEX);
+
+     //passing input as object and destruct the values. IF nothing passed the set default as empty object
+     function totalCalc({total = 100, tip = 0.15, tax = 0.13} = {}){
+     	return total + (total * tip) + (total * tax);
+     }
+     console.log(totalCalc());
+	</script>
+</body>
+</html>

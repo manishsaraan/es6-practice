@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>	
+     const details = ['Wes Bos', 123, 'wesbos.com'];
+     //destructing arrays
+     const [name, id, website] = details;
+    
+    const data = 'Basketball,sports,858585,23,extravlue';
+    //extraones will be ignored,
+    const [itemname, category, sku, inventory] = data.split(',');
+
+    //use of rest operator to get the rest values in array
+    const team = ['wes','harry','sarah','keegan','riker'];
+    const [captain, assistant, ...players] = team;
+	</script>
+</body>
+</html>
