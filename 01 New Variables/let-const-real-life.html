@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//using iife for block scoping
+		(function(){
+		   var name = "name";
+		})();
+
+		//using  braces for block scoping
+		{
+			const name1 = 'manish';
+			console.log(name1);
+		}
+
+		//fixing variable overriding in for loop with let block scoping
+		for(let i=0;i<10;i++){
+          console.log(i);
+          setTimeout(function(){
+          	console.log(`the number is ${i}`);
+          },1000);
+		}
+	</script>
+</body>
+</html>
