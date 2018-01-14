@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const names = ['wes', 'kait', 'lux'];
+		const fullname = names.map(function(name){
+           return  `${name} bos`;
+		});
+
+		//explicit return value from arrow function
+		const fullname2 = names.map( name => {
+			 return  `${name} boss`;
+		});
+        
+        //implecite return value from arrow function
+		const fullname3 = names.map( name =>`${name} boss` );
+        
+        //arrow function without input
+		const fullname4 = names.map( () =>`wess boss` );
+
+		//functional declartion 
+		const alertName = name => {
+			alert(`hello ${name}`)
+		};
+		alertName('manish');
+		console.log(fullname4);
+	</script>
+</body>
+</html>

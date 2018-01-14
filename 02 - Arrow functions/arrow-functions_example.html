@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const race = '100m Dash';
+		const winners = ['Gath', 'Song', 'Bos'];
+		//returning object in an arrow function
+		const win = winners.map( (winner, i) => ({
+			name : winner,
+			race,
+			place : i + 1
+		}));
+
+		const ages = [23,42,44,53,52,55];
+		//returning implicit 
+		const old = ages.filter( age => age >= 30);
+		console.log(old);
+	</script>
+</body>
+</html>
