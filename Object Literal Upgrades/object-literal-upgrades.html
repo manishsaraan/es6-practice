@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		const first = 'snickers';
+		const last = 'bos';
+		const age = 2;
+		const breed = 'king charles cav';
+		//it will create a object with same property as variable name
+		const dog = {
+			first,
+			last,
+			age,
+			breed
+		};
+        //ti will create propery name as same as function name
+		const modal = {
+			create(){
+
+			},
+			open(){
+
+			},
+			close(){
+
+			}
+		};
+
+		const key = 'pocketColor';
+		const value = 'yellow';
+		//we can pass string template in keys
+		const tShirt = {
+			[key] : value,
+			[`${key}Opposite`] : value
+		};
+		const keys = ['size', 'color', 'weight'];
+		const values = ['medium', 'red', 100];
+		const shirt = {
+			[keys.shift()] : values.shift(),
+			[keys.shift()] : values.shift(),
+			[keys.shift()] : values.shift(),
+           }
+	</script>
+</body>
+</html>
