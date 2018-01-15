@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		const apple = {
+			color : 'red',
+			size : 'medium',
+			weight : 50,
+			sugar : 10
+		};
+		//iterating over object with for of loop
+		for(const prop of Object.keys(apple)){
+			const value = apple[prop];
+			// console.log(value)
+		}
+		//iterating over object with for in loop
+		for(const prop in apple){
+			const value = apple[prop];
+			 console.log(value)
+		}
+	</script>
+</body>
+</html>

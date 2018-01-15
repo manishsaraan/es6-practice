@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		const cuts = ['chuck','brisket','shank','short rib'];
+		//we cant break a forEach loop with break;
+		cuts.forEach( cut => {
+			console.log(cut)
+		});
+        //for in also iterates over the prototype values of array
+		for(const index in cuts){
+			console.log(cuts[index])
+		}
+        //using for of loop
+		for(const cut of cuts){
+			console.log(cut);
+			if(cut === 'shank'){
+				break;
+			}
+		}
+	</script>
+</body>
+</html>
