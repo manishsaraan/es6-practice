@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="people">
+		<p>wes</p>
+		<p>kait</p>
+		<p>snickers</p>
+	</div>
+	<script>
+		const people = document.querySelectorAll('.people p');
+		//create array from nodeList with Array.from
+		const peopleArrray = Array.from(people);
+		//const names = peopleArrray.map( person => person.textContent);
+		//arrayfrom iwth map
+		const peopleArrrayWithMap = Array.from(people, person => {
+			return  person.textContent;
+		});
+		console.log(peopleArrrayWithMap);
+
+		function sumAll(){
+           console.log(arguments);
+           const nums = Array.from(arguments);
+         return  nums.reduce( (prev, next) => prev + next, 0)
+		}
+		const all = sumAll(33,44,5,3,4,5,5);
+
+        //create array of arguments passed in with array of
+		const ages = Array.of(23,4,54,5,6,6,3);
+	</script>
+</body>
+</html>
