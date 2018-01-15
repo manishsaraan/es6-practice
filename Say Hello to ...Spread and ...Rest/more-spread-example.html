@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="people">
+    <p>wes</p>
+    <p>kait</p>
+    <p>randy</p>
+  </div>
+  <script>
+    //make nodelist to array with spread operator
+    const people = [...document.querySelectorAll('.people p')];
+    const names = people.map( person => person.textContent);
+    const deepDish = {
+      pizzaName : 'Deep Dish',
+      size : 'Medium',
+      ingredients : ['marinara', 'italian sausage', 'dough', 'cheese']
+     };
+    //spreading inside an array
+    const shoppingList = ['milk', 'flour', ...deepDish.ingredients];
+
+    const comments = [
+         { id: 209384, text: 'I love your dog!' },
+         { id: 523423, text: 'Cuuute! 🐐' },
+         { id: 632429, text: 'You are so dumb' },
+         { id: 192834, text: 'Nice work on this wes!' },
+    ];
+
+    const id = 632429;
+    const commentIndex = comments.findIndex( comment => comment.id === id);
+    //using slice to get new array and with spread 
+    const newComments = [...comments.slice(0, commentIndex), ...comments.slice(commentIndex+1)];
+  </script>
+</body>
+</html>

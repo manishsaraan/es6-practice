@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//rest operator to get rest values in array
+		function convertCurrency(rate, ...amounts){
+           
+            return amounts.map( amount => amount * rate);
+		}
+		console.log(convertCurrency(1.54, 3,33,234,522,533));
+
+		const runner = ['wes bos', 123, 5.5,5,6,30];
+		//using rest operator with destructor
+        const [name, id, ...runs] = runner;
+	</script>
+</body>
+</html>
