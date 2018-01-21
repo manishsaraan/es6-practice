@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	   const posts = [
+		    { title: 'I love JavaScript', author: 'Wes Bos', id: 1 },
+		    { title: 'CSS!', author: 'Chris Coyier', id: 2 },
+		    { title: 'Dev tools tricks', author: 'Addy Osmanis', id: 3 },
+		  ];
+	   const authors = [
+		    { name: 'Wes Bos', twitter: '@wesbos', bio: 'Canadian Developer' },
+		    { name: 'Chris Coyier', twitter: '@chriscoyier', bio: 'CSS Tricks and CodePen' },
+		    { name: 'Addy Osmanis', twitter: '@addyosmani', bio: 'Googler' },
+		  ];
+
+	   function getPostById(id){
+	   	  //create a new promise
+          return new Promise( (resolve, reject) => {
+          	 //use of settimeout to mimic database
+          	 setTimeout( () => {        
+          	      //find the post    
+          	      const post = posts.find( post => post.id === id);
+		             if(post){
+		             	resolve(post); //send the post
+		             } else {
+		             	reject(Error('No Post Was Found!')); //return error
+		             }
+             }, 1000);
+          });
+	   };
+
+       function hydrateAuthor(post){
+
+       	  //create a new promise
+          return new Promise(( resolve, reject) => {
+          	//find the author
+          	debugger;
+          	const authorDetails = authors.find( person => person.name === post.author);
+          	if(authorDetails){
+          		//hydrate the post object with author
+          		post.author = authorDetails;
+          		resolve(post);
+          	}
+          	else{
+          		reject(Error('can\t find the author'));
+          	}
+          });
+       };
+
+	   getPostById(2)
+          .then(post => {          
+             return hydrateAuthor(post);
+          })
+          .then( post => {
+          	console.log('post->>>',post);
+          })
+          .catch(error => {
+          	console.log(error);
+          })
+	    ;
+	</script>
+</body>
+</html>
