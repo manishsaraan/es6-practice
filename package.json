@@ -1,0 +1,23 @@
+{
+  "name": "es6-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manishsaraan/es6-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manishsaraan/es6-practice/issues"
+  },
+  "homepage": "https://github.com/manishsaraan/es6-practice#readme",
+  "devDependencies": {
+    "slug": "^0.9.1"
+  }
+}
