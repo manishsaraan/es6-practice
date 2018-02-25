@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  ES6 Classes
+  <script>
+    class Dog{
+      constructor(name, breed){
+          this.name = name;
+          this.breed = breed;
+      }
+      //methods goes here
+      bark(){
+        console.log(`Bark Bark. My name is ${this.name}`);
+      }
+      cuddle(){
+        console.log(`I love my owner`);
+      }
+      //getter and setter methods in class
+      //getter method will be available with snickets.description
+      get description(){
+        return `${this.name} is a ${this.breed} type of dog`;
+      }
+      set nickname(value){
+        this.nick = value;
+      }
+      get nicknames(){
+        return this.nick;
+      }
+      //statick method goes here
+      //static methods will only be available with class itself
+      static info(){
+         return `A dog is better than a cat`;
+      }
+    }
+
+    const snickers = new Dog('Snickers', 'King Charles');
+    const sunny = new Dog('Sunny', 'Golden Doodle');
+  </script>
+</body>
+</html>
