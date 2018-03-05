@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>	
+	Async + Await
+	<script>
+	 async function getData(names){
+	 	const promises = names.map(name => fetch(`https://api.github.com/users/${name}`).
+	 		then(r => r.json()));
+	 	const people = await Promise.all(promises);
+	 	console.log(people);
+	 }
+	 getData(['wesbos', 'manishsaraan']);
+	</script>
+</body>
+</html>

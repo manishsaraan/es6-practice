@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<video src="" class="handsome"></video>
+	<script>
+		const video = document.querySelector('.handsome');
+		navigator.mediaDevices.getUserMedia({video : true}).then(mediaStream =>{
+			video.srcObject = mediaStream;
+			video.load();
+			video.play();
+		}).
+		catch(err =>{
+			console.log(err);
+		});
+	</script>
+</body>
+</html>
