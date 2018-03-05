@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	Proxy intro
+	<script>
+		//proxy is used to modify the default behaviour of object
+		const person = { name : 'wes', age : 100};
+
+		//proxy excepts object and obj of methods which you want to modify
+		const personProxy = new Proxy(person, {
+
+			//updating the get method of object
+			get(target, name){
+				//console.log('someone is asking for ', target, name);
+				return target[name].toUpperCase();
+			},
+
+			//updating the set method of object
+			set(target, name, value){
+				if(typeof value === "string"){
+					target[name] = value.trim();  
+				}
+			}
+		});
+
+		personProxy.name = "manish";
+	</script>
+</body>
+</html>
