@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sets</title>
+</head>
+<body>
+	Sets
+	<script>
+		//creating a new set
+		const brunch = new Set();
+		brunch.add('wes');
+		brunch.add('wes2');
+		brunch.add('wes3');
+        
+        //calling
+        const line = brunch.values(); //gives us generator function
+        console.log(line.next().value);
+        console.log(line.next().value);
+        console.log(line.next().value);
+        brunch.add('wes3');
+        brunch.add('wes4');
+        console.log(line.next().value);
+        console.log(line.next().value);
+
+	</script>
+</body>
+</html>

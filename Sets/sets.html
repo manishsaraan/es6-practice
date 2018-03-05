@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sets</title>
+</head>
+<body>
+	Sets
+	<script>
+		//creating a new set
+		const people = new Set();
+		people.add('Wes');
+		people.add('Wes1');
+		people.add('Wes2');
+		for(const person of people){
+			console.log(person);
+		}
+
+		const dog = ['snickers'];
+		const dogSet =new Set(dog);
+        
+        //directly passing values in set
+		const students = new Set(['first', 'second']);
+	</script>
+</body>
+</html>
